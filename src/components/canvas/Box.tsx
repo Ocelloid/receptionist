@@ -6,7 +6,6 @@ export default function Box(props: ThreeElements["mesh"]) {
   const ref = useRef<THREE.Mesh>(null!);
   const [hovered, hover] = useState(false);
   const [clicked, click] = useState(false);
-  //   eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call
   useFrame((state, delta) => (ref.current.rotation.x += delta));
   return (
     <mesh
