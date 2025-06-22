@@ -1,9 +1,10 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Character from "./Character";
+// import Character from "./Character";
 import Lighting from "./Lighting";
 import Desk from "./desk/Desk";
+import { Test2 } from "./Test2";
 
 export default function MainCanvas() {
   return (
@@ -18,8 +19,13 @@ export default function MainCanvas() {
     >
       <Lighting />
       <OrbitControls />
-      <Desk position={[0, -0.1, 0.75]} scale={[0.6, 0.6, 0.6]} />
-      <Character position={[0, -0.5, 0]} rotation={[0, 0, 0]} />
+      <Desk position={[0, -1.125, 1.125]} scale={[1, 1, 1]} />
+      {/* <Character position={[0, -0.5, 0]} rotation={[0, 0, 0]} /> */}
+      <Test2
+        position={[0, -1.5, 0]}
+        rotation={[0, 0, 0]}
+        scale={[0.25, 0.25, 0.25]}
+      />
     </Canvas>
   );
 }
